@@ -24,6 +24,7 @@ If necessary use
 
 ## Run
 open the notebook RNN_project.ipynb in a terminal
+
 ```jupyter notebook RNN_project.ipynb```
 
 ## Accelerating the Training Process 
