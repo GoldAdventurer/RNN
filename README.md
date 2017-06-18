@@ -1,4 +1,30 @@
-# Recurrent Neural Networks course project: time series prediction and text generation
+# Recurrent Neural Networks course project: time series prediction and text generation (RNN)
+RNN for times series prediction and sequence generation 
+
+### Problem 1: Perform time series prediction¶
+In the first problem, the code performs time series prediction using a Recurrent Neural Network regressor. In particular it re-creates the figure where the stock price of Apple is forecasted (or predicted) 7 days in advance. The code constructs RNNs using Keras.
+The particular network architecture employed for the RNN is known as Long Term Short Memory (LTSM), which helps significantly avoid technical problems with optimization of RNNs.
+
+### Problem 2: Create a sequence generator
+In this project, the code implements a popular Recurrent Neural Network (RNN) architecture to create an English language sequence generator capable of building semi-coherent English sentences from scratch by building them up character-by-character. This requires a substantial amount amount of parameter tuning on a large training corpus (at least 100,000 characters long). In particular for this project we are using a complete version of Sir Arthur Conan Doyle's classic book The Adventures of Sherlock Holmes.
+The machine learning model is trained to generate text automatically, character-by-character by showing the model many training examples so it can learn a pattern between input and output. With this type of text generation each input is a string of valid characters like this one
+dogs are grea
+whlie the corresponding output is the next character in the sentence - which here is 't' (since the complete sentence is 'dogs are great'). Many such examples are shown to the model in order for it to make reasonable predictions.
+
+
+## Install 
+Install tensorflow
+`conda install -c conda-forge tensorflow=1.0.0`
+
+If necessary use
+
+```sudo pip install keras```
+
+```KERAS_BACKEND=tensorflow python -c "from keras import backend"```
+
+## Run
+open the notebook RNN_project.ipynb in a terminal
+```jupyter notebook RNN_project.ipynb```
 
 ## Accelerating the Training Process 
 
@@ -12,57 +38,6 @@ If you have access to a GPU, you should follow the Keras instructions for [runni
 
 Instead of a local GPU, you could use Amazon Web Services to launch an EC2 GPU instance. (This costs money.)
 
+**License**
 
-         
-## Rubric items
-
-#### Files Submitted
-
-| Criteria       		|     Meets Specifications	        			            | 
-|:---------------------:|:---------------------------------------------------------:| 
-| Submission Files      |  RNN_project.ipynb, my_answers.py --> both the completed notebook  RNN_project.ipynb as well as all completed python functions requested in the main notebook RNN_project.ipynb (TODO items) should be copied into this python script and submitted for grading.		|
-
-#### Documentation
-
-| Criteria       		|     Meets Specifications	        			            | 
-|:---------------------:|:---------------------------------------------------------:| 
-| Comments         		| The submission includes comments that describe the functionality of the code.  Every line of code is preceded by a meaningful comment.  1. describing input parameters to Keras module functions.  2. function calls  3. explaning thought process in common language	|
-
-#### Step 1:  Implement a function to window time series
-| Criteria       		|     Meets Specifications	        			            | 
-|:---------------------:|:---------------------------------------------------------:| 
-| Window time series data. |  The submission returns the proper windowed version of input time series of proper dimension listed in the notebook.  |
-
-
-#### Step 2: Create a simple RNN model using keras to perform regression
-
-| Criteria       		|     Meets Specifications	        			            | 
-|:---------------------:|:---------------------------------------------------------:| 
-| Build an RNN model to perform regression. |  The submission constructs an RNN model in keras with LSTM module of dimension defined in the notebook.        |
-
-
-#### Step 3: Clean up a large text corpus
-
-| Criteria       		|     Meets Specifications	        			            | 
-|:---------------------:|:---------------------------------------------------------:| 
-| Find and remove all non-english or punctuation characters from input text data.  The submission removes all non-english / non-punctuation characters.  |
-
-
-#### Step 4: Implement a function to window a large text corpus
-
-| Criteria       		|     Meets Specifications	        			            | 
-|:---------------------:|:---------------------------------------------------------:| 
-| Implement a function to window input text data| The submission returns the proper windowed version of input text of proper dimension listed in the notebook.  |
-
-
-#### Step 5: Create a simple RNN model using keras to perform multiclass classification
-
-| Criteria       		|     Meets Specifications	        			            | 
-|:---------------------:|:---------------------------------------------------------:| 
-| Build an RNN model to perform multiclass classification. |  The submission constructs an RNN model in keras with LSTM module of dimension defined in the notebook.        |
-
-
-#### Step 6: Generate text using a fully trained RNN model and a variety of input sequences
-| Criteria       		|     Meets Specifications	        			            | 
-|:---------------------:|:---------------------------------------------------------:| 
-| Generate text using a trained RNN classifier.   | The submission presents examples of generated text from a trained RNN module.  The majority of this generated text should consist of real english words. |
+The files are private domain works.
